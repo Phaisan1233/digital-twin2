@@ -1,5 +1,6 @@
 import { useDrag } from "react-dnd";
 import { ItemTypes } from "./ItemTypes";
+
 const style = {
   position: "absolute",
   border: "1px dashed gray",
@@ -7,7 +8,7 @@ const style = {
   padding: "0.5rem 1rem",
   cursor: "move",
 };
-export const Box = ({ id, left, top, hideSourceOnDrag, children }) => {
+export default function Box({ id, left, top, hideSourceOnDrag, children }) {
   const [{ isDragging }, drag] = useDrag(
     () => ({
       type: ItemTypes.BOX,
@@ -26,4 +27,4 @@ export const Box = ({ id, left, top, hideSourceOnDrag, children }) => {
       {children}
     </div>
   );
-};
+}

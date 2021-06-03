@@ -7,7 +7,7 @@ import Paper from "@material-ui/core/Paper";
 
 const styles = {
   width: "100%",
-  height: "600px",
+  height: "100%",
   position: "relative",
 };
 
